@@ -59,14 +59,11 @@ table {
 :root {
 	/* Font Size */
 	--global--font-size-xxs: 1vw;
-	--global--font-size-xs: 1.25vw;
+	--global--font-size-xs: 1.22vw;
 	--global--font-size-s: 2vw;
 	--global--font-size-m: 2.5vw;
 	--global--font-size-lg: 3vw;
 	--global--letter-spacing: normal;
-
-	/* Line Height */
-	--global--line-height: 1;
 
 	/* Colors */
 	--global--color-rust: #7D1A15;
@@ -75,19 +72,6 @@ table {
 	--global--color-light-brown: #96614A;
 	--global--color-pink: #E9806E;
 
-	/* Buttons */
-	--button--color-one: var(--global--color-light-brown);
-	--button--color-one-hover: var(--global--color-secondary);
-
-	/* Main navigation */
-	--primary-nav--font-size: 14px;
-	
-	/* Footer */
-	--footer--color-text: var(--global--color-primary);
-	--footer--color-link: var(--global--color-primary);
-	--footer--color-link-hover: var(--global--color-primary-hover);
-
-	
 }
 /* 
 * all font sizes. h6 excluded 
@@ -444,10 +428,17 @@ footer {
 * Individual Recipes Pages
 *	==============================================
 */
+svg {
+	height: 1vw;
+	width: 1vw;
+}
 .intro img {
 	height: 15vw;
 	width: 15vw;
 	object-fit: cover;
+}
+#bread {
+	transform: rotate(-90deg);
 }
 .intro {
 	display: flex;
