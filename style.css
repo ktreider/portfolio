@@ -57,7 +57,7 @@ a:hover {
 	/* Font Size */
 	--global--font-size-xxs: 1vw;
 	--global--font-size-xs: 1.35vw;
-	--global--font-size-s: 2vw;
+	--global--font-size-s: 1.8vw;
 	--global--font-size-m: 2.5vw;
 	--global--font-size-lg: 3vw;
 	--global--letter-spacing: normal;
@@ -77,7 +77,7 @@ h1 {font-size: var(--global--font-size-lg);}
 h2 {font-size: var(--global--font-size-m);}
 h3 {font-size: var(--global--font-size-s);}
 h4, .btn, p, .lght-brwn a, li, .form-control, #submit {font-size: var(--global--font-size-xs);}
-h5, a {font-size: var(--global--font-size-xxs);}
+h5, a, .smaller, .job ul li {font-size: var(--global--font-size-xxs);}
 
 @media only screen and (min-width: 1500px) {.navbar-brand {font-size: var(--global--font-size-xs);}}
 @media only screen and (max-width: 1000px) {.navbar-brand {font-size: var(--global--font-size-s);}
@@ -124,9 +124,9 @@ h5, a {font-size: var(--global--font-size-xxs);}
 {font-family: "dosis-bold"}
 .hdr a
 {font-family: "dosis";}
-h4, button a
-{font-family: "mulish";}
-nav ul li a, p, .navbar
+h3
+{font-family: "mulish-bold";}
+nav ul li a, p, .navbar, .btn, ul li
 {font-family: "overpass";}
 .h-bold
 {font-family: "overpass-bold";}
@@ -631,4 +631,42 @@ footer {
 .experience-section {
 	background-color: var(--global--color-grey);
 	padding: 5vw 0;
+}
+.text-section {
+	width: calc( .85 * var(--responsive--aligndefault-width));
+	margin: auto;
+}
+.text-section h3 {
+	padding: 3vw 0 2vw 0;
+}
+.job {
+	display: flex;
+	height: 10vw;
+}
+.job p {
+	line-height: 1.5;
+}
+.title-info {
+	flex-basis: 40%;
+}
+.description {
+	flex-basis: 60%;
+}
+.job ul li {
+	list-style-type: square;
+	line-height: 1.5
+}
+
+.gallery-exp img{
+	height: 17vw;
+    width: 17vw;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.gallery-exp {
+	width: calc( .85 * var(--responsive--aligndefault-width));
+	margin: auto;
+	display: flex;
+	padding: 5vw 0;
+	justify-content: space-between;
 }
