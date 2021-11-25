@@ -1,6 +1,6 @@
 /* -----------
 Katie Reider
-Culinary Creations
+Personal Portfolio
 Stylesheet
 2021
 -------------- */
@@ -8,19 +8,12 @@ Stylesheet
 /* 
 css reset
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -51,6 +44,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a:hover {
+	text-decoration: none;
+	color: initial;
+}
 
 /*------------------------------*/
 
@@ -59,18 +56,17 @@ table {
 :root {
 	/* Font Size */
 	--global--font-size-xxs: 1vw;
-	--global--font-size-xs: 1.22vw;
+	--global--font-size-xs: 1.35vw;
 	--global--font-size-s: 2vw;
 	--global--font-size-m: 2.5vw;
 	--global--font-size-lg: 3vw;
 	--global--letter-spacing: normal;
 
 	/* Colors */
-	--global--color-rust: #7D1A15;
-	--global--color-dark-brown: #530F0E; 
-	--global--color-brown: #92441D;
-	--global--color-light-brown: #96614A;
-	--global--color-pink: #E9806E;
+	--global--color-green: #008f6d;
+	--global--color-yellow: #f9c04d;
+	--global--color-blue: #123263;
+	--global--color-grey: #c7c7c7;
 
 }
 /* 
@@ -80,50 +76,60 @@ table {
 h1 {font-size: var(--global--font-size-lg);}
 h2 {font-size: var(--global--font-size-m);}
 h3 {font-size: var(--global--font-size-s);}
-h4, p, .m-bold, .lght-brwn a, li {font-size: var(--global--font-size-xs);}
+h4, .btn, p, .lght-brwn a, li, .form-control, #submit {font-size: var(--global--font-size-xs);}
 h5, a {font-size: var(--global--font-size-xxs);}
+
+@media only screen and (min-width: 1500px) {.navbar-brand {font-size: var(--global--font-size-xs);}}
+@media only screen and (max-width: 1000px) {.navbar-brand {font-size: var(--global--font-size-s);}
+											.nav-link {font-size: var(--global--font-size-s);}}
+@media only screen and (max-width: 700px) {.navbar-brand {font-size: var(--global--font-size-m);}}
 
 /* 
 * Fonts 
 *	==============================================
 */
 @font-face {
-	font-family: martel-light;
-	src: url('../fonts/martel/martel-light.ttf');
+	font-family: dosis;
+	src: url('../fonts/Dosis/static/Dosis-regular.ttf');
 	font-weight: normal;
 }
 @font-face {
-	font-family: martel-bold;
-	src: url('../fonts/martel/martel-extrabold.ttf');
+	font-family: dosis-bold;
+	src: url('../fonts/Dosis/static/Dosis-Bold.ttf');
 	font-weight: normal;
 }
 @font-face {
-	font-family: rasa;
-	src: url('../fonts/rasa/static/rasa-medium.ttf');
+	font-family: mulish;
+	src: url('../fonts/Mulish/static/Mulish-Regular.ttf');
 	font-weight: normal;
 }
 @font-face {
-	font-family: heebo;
-	src: url('../fonts/heebo/static/heebo-light.ttf');
+	font-family: mulish-bold;
+	src: url('../fonts/Mulish/static/Mulish-Bold.ttf');
 	font-weight: normal;
 }
 @font-face {
-	font-family: heebo-bold;
-	src: url('../fonts/heebo/static/heebo-bold.ttf');
+	font-family: overpass;
+	src: url('../fonts/Overpass/static/Overpass-Regular.ttf');
+	font-weight: normal;
+}
+@font-face {
+	font-family: overpass-bold;
+	src: url('../fonts/Overpass/static/Overpass-Bold.ttf');
 	font-weight: normal;
 }
 
 /* Change all fonts right here */
-.title, .m-bold 
-{font-family: "martel-bold"}
-.hdr a, .information h1
-{font-family: "martel-light";}
-.preview h3, button a, .information h2, .information h4, .instructions h3, .steps h3  
-{font-family: "rasa";}
-nav ul li a, p, .ingredients, .amount, .information a, li
-{font-family: "heebo";}
+#title, h2
+{font-family: "dosis-bold"}
+.hdr a
+{font-family: "dosis";}
+h4, button a
+{font-family: "mulish";}
+nav ul li a, p, .navbar
+{font-family: "overpass";}
 .h-bold
-{font-family: "heebo-bold";}
+{font-family: "overpass-bold";}
 
 
 
@@ -158,8 +164,8 @@ nav ul li a, p, .ingredients, .amount, .information a, li
 @media only screen and (min-width: 1000px) {
 
 	:root {
-		--responsive--aligndefault-width: min(calc(105vw - 10 * var(--global--spacing-horizontal)), 2250px); 
-		--responsive--alignwide-width: min(calc(105vw - 10 * var(--global--spacing-horizontal)), 2250px); 
+		--responsive--aligndefault-width: min(calc(108vw - 10 * var(--global--spacing-horizontal)), 2250px); 
+		--responsive--alignwide-width: min(calc(108vw - 10 * var(--global--spacing-horizontal)), 2250px); 
 	}
 }
 
@@ -178,8 +184,8 @@ nav ul li a, p, .ingredients, .amount, .information a, li
 	text-align: center;
     text-decoration: none;
 	cursor: pointer;
-	position: absolute;
-	margin: 1vw 0;
+	/*position: absolute;*/
+	margin: 1vw 2.75vw;
 
 }
 .btn:hover {
@@ -190,23 +196,32 @@ nav ul li a, p, .ingredients, .amount, .information a, li
 	position: relative;
 }
 /*colors for buttons */
-.brown {
-	border-color: var(--global--color-brown);
-    color: var(--global--color-brown);
+.green {
+	border-color: var(--global--color-green);
+    color: var(--global--color-green);
 }
-.brown:hover {
+.green:hover {
 	border-color: white;
-	background-color: var(--global--color-brown);
+	background-color: var(--global--color-green);
 	color: white;
 }
-.rust {
-	border-color: var(--global--color-rust);
-    color: var(--global--color-rust);
-}
-.rust:hover {
+.rev-green {
 	border-color: white;
-	background-color: var(--global--color-rust);
+	background-color: var(--global--color-green);
 	color: white;
+}
+.rev-green:hover {
+	border-color: var(--global--color-green);
+    color: var(--global--color-green);
+	background-color: white;
+}
+
+
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 3vw;
 }
 
 
@@ -215,18 +230,29 @@ nav ul li a, p, .ingredients, .amount, .information a, li
 * Links & nav hovering
 *	==============================================
 */
+/* bootstrap nav */
+.navbar {
+	width: 100%;
+}
+.navbar-expand-lg .navbar-collapse {
+	justify-content: flex-end;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,1);
+}
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0, 1);
+    border-color: #ffffff;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+
+/*my css*/
 a {
 	text-decoration: none;
-	color: white;
 }
-nav a.current-page {
-	color: var(--global--color-pink);
-	opacity: 75%;
-}
-a:hover {
-	text-decoration: underline white;
-	text-underline-offset: .25vw;;
-}
+
 
 
 
@@ -235,9 +261,6 @@ a:hover {
 * Header & Navigation
 *	==============================================
 */
-header {
-	background: var(--global--color-dark-brown);
-}
 .header {
 	width: var(--responsive--aligndefault-width);
 	margin: auto;
@@ -259,34 +282,10 @@ nav ul li a {
 }
 
 
-/*
-* Hero banner
-*	==============================================
-*/
-.hero-banner {
-    background-image: linear-gradient(to left, rgba(0,0,0, .35), rgba(0,0,0, .35));
-    position: relative;
-	height: 30vw; /* to set height of image*/ 
-}
-.img-bkg {
-    width: 100%;
-	height: 100%;
-	object-fit: cover;
-    position: relative;
-    z-index: -1;
-}
-.hero-banner .title {
-    position: absolute;
-    top: 45%; /* for 'centering' of the text */
-    left: 35%;
-    color: white;
-}
-
-
 
 
 /*
-* Blurb
+* Title
 *	==============================================
 */
 .margins {
@@ -294,213 +293,342 @@ nav ul li a {
 	margin: auto;
 	padding: 3vw;
 }
-
-#blurb {
-	color: white;
-	background-color: var(--global--color-light-brown);
-	padding: 5vw;
-	line-height: 2;
+#title {
+	background-color: var(--global--color-green);
+	padding: 5vw 5vw 8vw 5vw;
 }
+
+
 
 
 
 /*
-* Gallery
+* About
 *	==============================================
 */
-#gallery {
-	background-color: var(--global--color-pink);
+.about-section {
+	background-color: var(--global--color-green);
+	padding: 5vw 0;
 }
-.photos {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
+.about-section p, .experience-section p {
+	line-height: 1.5;
 }
-#gallery img {
-	width: 15vw;
-	height: 15vw;
-	object-fit: cover;
-	padding: 1.5vw;
-}
-
-/*
-* Recipes Section
-*	==============================================
-*/
-#recipes {
-	width:  var(--responsive--aligndefault-width);
+#about, #exp {
+	width: calc( .85 * var(--responsive--aligndefault-width));
 	margin: auto;
-	padding: 2vw 0 3vw 0;
-}
-.r-section {
 	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
+	justify-content: space-between;
+
 }
-#recipes img {
-	width: 30vw;
-	height: 30vw;
+.img-overlay, .about-section img, .experience-section img {
+    position: relative;
+	width: 20vw;
+	height: 27vw;
+	border-radius: 22px;
 	object-fit: cover;
 }
-.preview {
-	color: white;
-	flex-basis: 37.5%;
-	padding: 2vw;
-	margin: 1vw;
+.img-overlay .over {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	background-image: linear-gradient(to left, rgba(0,0,0, .3), rgba(0,0,0, .3));
+	border-radius: 22px;
+}
+.img-overlay .zmdi {
+	bottom: 0;
+	right: 0;
+}
 
+.info {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	justify-content: space-around;
+	padding: 1vw 8vw 1vw 0;
 }
-.preview *:not(.btn) {
-	width: 30vw;
+
+
+
+
+
+
+/*
+* Projects
+*	==============================================
+*/
+.project-section {
+	background-color: var(--global--color-grey);
+	padding: 3vw 0 5vw 0;
 }
-.preview *:not(a) {
-	padding: .25vw 0;
+.project-section * {
+	width: calc( .85 * var(--responsive--aligndefault-width));
+	margin: auto;
 }
-.preview h3 {
+.gallery img {
+	height: 20vw;
+	width: 20vw;
+	object-fit: cover;
+	border-radius: 5px;
+}
+.gallery {
+	display: flex;
+}
+.background {
+	display: flex;
+	padding: 1vw;
+	background-color: var(--global--color-blue);
+	margin: 2vw;
+	border-radius: 5px;
+	
+	position: relative;
+}
+.background .zmdi {
+	position: absolute;
+	bottom: 3%;
+	right: 7%;
+}
+.project-section h2, .project-section p {
+	text-align: center;
+	padding-top: .5vw;
+}
+.project-section h2 {
 	padding-top: 2vw;
 }
 
 
-@media only screen and (max-width: 900px) {
-	.r-section{
-		flex-direction: column;
-		align-items: center;
-	}
-	.preview {
-		padding: 2vw 10vw;
-	}
+
+
+
+/*
+* 	Contact 
+*	==============================================
+*/
+.contact-area {
+	background-color: var(--global--color-yellow);
+}
+/* for the contact-form */
+form {
+	width: 50%;
+	background-color: white;
+	padding: 2vw 0 4vw 0;
+	margin-right: 4vw;
+
+	position: relative;
+}
+.col-md-6 {
+	width: 100%;
+}
+.form-control, .form-control:hover, .form-control:focus {
+	background-color: var(--global--color-grey);
+	transition: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+.form-control:focus {
+	border-color: rgba(18, 50, 99, .5);
+}
+#name.form-control, #telephone.form-control {
+	height: 4vw
+}
+#textarea.form-control {
+	height: 25vw;
+}
+.container {
+	max-width: var(--responsive--aligndefault-width);
+	padding: 5vw;
+}
+.pd, #submit {
+	padding: 0 2vw;
+}
+#submit {
+	color: black;
+	text-align: right;
+
+	position: absolute;
+	right: 9%;
+	bottom: 1.5vw;
+}
+.zmdi-trending-flat {
+	position: absolute;
+    bottom: -1.25vw;
+    right: -22%;
 }
 
-/* background color */ 
-.preview:nth-child(1),
-.preview:nth-child(4) {
-	background-color: var(--global--color-dark-brown);
+/* for the socials */
+.container {
+	display: flex;
+	justify-content: space-around;
 }
-.preview:nth-child(2), 
-.preview:nth-child(3){
-	background-color: var(--global--color-light-brown);
+.links {
+	display: flex;
+	padding: 4vw 0 0 0;
+}
+.social {
+	height: 6vw;
+	padding: 0 1.25vw
+}
+.social-text {
+	display: flex;
+	flex-direction: column;
+	height: 75%;
+	justify-content: space-around;
+}
+.social-text h2 {
+	text-align: right;
+}
+.email p {
+	padding: 1vw 0;
+}
+.back {
+	background-color: var(--global--color-blue);
+	padding: 1vw;
+	border-radius: 100px;
+	height: 6vw;
+}
+ a.social:nth-child(2n) .back {
+	background-color: var(--global--color-green);
+}
+.zmdi{
+	font-size: 4vw;
+	height: 4vw;
+	width: 4vw;
+	text-align: center;
+	color: white;
+}
+.zmdi.black {
+	color: black;
 }
 
-.preview:nth-child(4) img {
-	transform: rotate(-90deg);
-}
+
+
 
 /*
 * Footer
 *	==============================================
 */
 footer {
-	background: var(--global--color-dark-brown);
+	background-color: var(--global--color-grey);
 }
-.footer {
-	width: var(--responsive--aligndefault-width);
+.ftr {
+	width: calc(.969 * var(--responsive--aligndefault-width));
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	padding: 1vw 0;
 }
-.ftr {
-	color: white;
-	padding: 5vw 0;
+.ftr a {
+	color: black;
 }
-.ftr * {
-	padding-top: 1vw;
+.ftr a:hover {
+	color: rgba(0,0,0,.5);
 }
-#ftr-links {
-	padding-right: 2.5vw;
-}
-#ftr-links ul {
-	flex-direction: column;
-}
-#ftr-links li {
-	padding: .75vw 0;
-}
-.ftr .m-bold {
-	display: inline;
-}
+
+
 
 
 /*---------------------------------------*/
 
 /*
-* Individual Recipes Pages
+* Individual Pages
 *	==============================================
 */
-svg {
-	height: 1vw;
-	width: 1vw;
-}
-.intro img {
-	height: 15vw;
-	width: 15vw;
-	object-fit: cover;
-}
-#bread {
-	transform: rotate(-90deg);
-}
-.intro {
-	display: flex;
-	justify-content: space-around;
-	line-height: 1.5;
-}
-.ingredients {
-	display: flex;
-}
 
-.section {
-	background-color: var(--global--color-light-brown);
-}
-.intro {
-	width: var(--responsive--aligndefault-width);
+
+
+
+/*
+* about/personal background page
+*	==============================================
+*/
+.personal-area {
+	width: calc( .95 * var(--responsive--aligndefault-width));
 	margin: auto;
 
-	color: white;
-	padding: 2vw 0 3vw 0;
+	padding: 7vw 0;
+	display:flex;
 }
-.information h1 {
-	padding-top: 1vw;
-}
-
-.ingredients li {
-	list-style-type: circle;
-}
-.name, .amount {
-	padding: 1vw;
-}
-.amount {
-	padding-left: 5vw;
-}
-.extra-images {
+.column-1, .column-2, .column-3, .column-4 {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 }
-.extra-images img {
-	height: 12vw;
-	width: 12vw;
-	background-color: var(--global--color-pink);
-	padding: 3vw 4vw;;
-	margin: .5vw;
+.column-1, .column-4 {
+	flex-basis: 30%;
+}
+.column-2, .column-3 {
+	flex-basis: 20%;
+}
+.column-2 {
+	align-items: flex-end;
+}
+.column-3 {
+	align-items: flex-start;
 }
 
 
-.steps ul:not(.no-space) {
-	padding: 1vw;
-}
-.no-space{ 
-	padding: 0 1.5vw;
-}
-.steps li {
-	list-style-type: circle;
-}
-.instructions {
-	width: calc( .8 * var(--responsive--aligndefault-width));
-	margin: auto;
-	padding: 2vw 0 4vw 0;
+.personal-area p {
 	line-height: 1.5;
+	padding: 0 .75vw
 }
-.instructions h3, .steps h3 {
-	color: var(--global--color-brown);
+.personal-area img {
+	width: 15vw;
+	height: 10vw;
+	object-fit: cover;
+}
+.block-height {
+	height: 10vw;
+}
+.column-4 .block-height {
+	padding-top: 1.5vw;
+}
+.height {
+	height: 11.5vw !important;
+}
+.more-h {
+	height: 11.5vw;
+	position: relative;
+}
+.more-h img {
+	position: absolute;
+	bottom: 0;
+	left:0;
+}
+.block {
+	height: 10vw;
+	width: 10vw;
+}
+.grn {
+	background-color: var(--global--color-green);
+}
+.blue {
+	background-color: var(--global--color-blue);
+}
+.yellow {
+	background-color: var(--global--color-yellow);
+}
+.grey {
+	background-color: var(--global--color-grey);
+}
+
+.more-photos {
+	width: calc( .85 * var(--responsive--aligndefault-width));
+	margin: auto;
+	text-align: center;
+	padding: 1vw 0 6vw 0;
+}
+
+
+
+
+
+
+/*
+*  work/experiences page
+*	==============================================
+*/
+.experience-section {
+	background-color: var(--global--color-grey);
+	padding: 5vw 0;
 }
