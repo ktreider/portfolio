@@ -310,17 +310,17 @@ nav ul li a {
 	background-color: var(--global--color-green);
 	padding: 5vw 0;
 }
-.about-section p, .experience-section p {
+.about-section p, .experience-section p, .pnc-section p {
 	line-height: 1.5;
 }
-#about, #exp {
+#about, #exp, #project {
 	width: calc( .85 * var(--responsive--aligndefault-width));
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
 
 }
-.img-overlay, .about-section img, .experience-section img {
+.img-overlay, .about-section img, .experience-section img, .pnc-section img {
     position: relative;
 	width: 20vw;
 	height: 27vw;
@@ -669,4 +669,26 @@ footer {
 	display: flex;
 	padding: 5vw 0;
 	justify-content: space-between;
+}
+
+
+
+
+
+/*
+*  projects & coursework page
+*	==============================================
+*/
+.pnc-section {
+	background-color: var(--global--color-blue);
+	padding: 5vw 0;
+	color: var(--global--color-grey);
+}
+.pnc-section h2 {
+	width: 25%;
+}
+#project ul li {
+	list-style-type: square;
+	line-height: 1.5;
+	margin-left: 1.5vw;
 }
