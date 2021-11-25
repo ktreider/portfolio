@@ -77,7 +77,7 @@ h1 {font-size: var(--global--font-size-lg);}
 h2 {font-size: var(--global--font-size-m);}
 h3 {font-size: var(--global--font-size-s);}
 h4, .btn, p, .lght-brwn a, li, .form-control, #submit {font-size: var(--global--font-size-xs);}
-h5, a, .smaller, .job ul li {font-size: var(--global--font-size-xxs);}
+h5, a, .smaller, .job ul li, .proj .btn, .column p, .column ul li {font-size: var(--global--font-size-xxs);}
 
 @media only screen and (min-width: 1500px) {.navbar-brand {font-size: var(--global--font-size-xs);}}
 @media only screen and (max-width: 1000px) {.navbar-brand {font-size: var(--global--font-size-s);}
@@ -217,7 +217,16 @@ nav ul li a, p, .navbar, .btn, ul li
     color: var(--global--color-green);
 	background-color: white;
 }
-
+.rev-blue {
+	border-color: white;
+	background-color: var(--global--color-blue);
+	color: white;
+}
+.rev-blue:hover {
+	border-color: var(--global--color-blue);
+    color: var(--global--color-blue);
+	background-color: white;
+}
 
 
 .buttons {
@@ -376,13 +385,13 @@ nav ul li a {
 	width: calc( .85 * var(--responsive--aligndefault-width));
 	margin: auto;
 }
-.gallery img {
+.gallery img, .proj img {
 	height: 20vw;
 	width: 20vw;
 	object-fit: cover;
 	border-radius: 5px;
 }
-.gallery {
+.gallery, .proj {
 	display: flex;
 }
 .background {
@@ -702,4 +711,65 @@ footer {
 	list-style-type: square;
 	line-height: 1.5;
 	margin-left: 1.5vw;
+}
+.projects {
+	width: calc( .85 * var(--responsive--aligndefault-width));
+	margin: auto;
+	padding: 1vw 0;
+}
+.proj {
+	justify-content: space-between;
+}
+.projects .background {
+	background-color: var(--global--color-grey);
+}
+.sect {
+	padding: 2vw;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	line-height: 1.5;
+}
+.sect .btn {
+	margin: 1vw 0;
+	width: 15vw;
+}
+.proj.two {
+	flex-direction: row-reverse;
+}
+.proj .btn.longer {
+	width: 20vw;
+}
+
+
+.yellow-wrapping {
+	background-color: var(--global--color-yellow);
+}
+.courses {
+	width: calc( .9 * var(--responsive--aligndefault-width));
+	margin: auto;
+	padding: 4vw 0;
+}
+.cols {
+	display: flex;
+	padding-top: 2vw; 
+}
+.column {
+	line-height: 1.5;
+	flex-basis: 33%;
+}
+.column ul li {
+	list-style-type: square;
+	margin-left: 1.5vw;
+	line-height: 1.75;
+}
+.column:first-child {
+	padding-right: 1vw;
+}
+.column:nth-child(2) {
+	padding: 0 1vw;
+}
+.column:last-child {
+	padding-left: 1vw;
 }
