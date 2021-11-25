@@ -124,6 +124,8 @@ h5, a, .smaller, .job ul li {font-size: var(--global--font-size-xxs);}
 {font-family: "dosis-bold"}
 .hdr a
 {font-family: "dosis";}
+h4
+{font-family: "mulish";}
 h3
 {font-family: "mulish-bold";}
 nav ul li a, p, .navbar, .btn, ul li
@@ -251,6 +253,15 @@ nav ul li a, p, .navbar, .btn, ul li
 /*my css*/
 a {
 	text-decoration: none;
+}
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	z-index: 1000;
+	padding: 1vw 1.5vw;
 }
 
 
