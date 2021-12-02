@@ -79,10 +79,23 @@ h3 {font-size: var(--global--font-size-s);}
 h4, .btn, p, .lght-brwn a, li, .form-control, #submit {font-size: var(--global--font-size-xs);}
 h5, a, .smaller, .job ul li, .proj .btn, .column p, .column ul li {font-size: var(--global--font-size-xxs);}
 
+@media only screen and (max-width: 500px) {
+	:root {
+		/* Font Sizes */
+		--global--font-size-xxs: 2vw;
+		--global--font-size-xs: 3vw;
+		--global--font-size-s: 4vw;
+		--global--font-size-m: 5.5vw;
+		--global--font-size-lg: 7vw;
+	}
+}
+
+
+
 @media only screen and (min-width: 1500px) {.navbar-brand {font-size: var(--global--font-size-xs);}}
 @media only screen and (max-width: 1000px) {.navbar-brand {font-size: var(--global--font-size-s);}
 											.nav-link {font-size: var(--global--font-size-s);}}
-@media only screen and (max-width: 700px) {.navbar-brand {font-size: var(--global--font-size-m);}}
+@media only screen and (max-width: 700px) {.navbar-brand {font-size: var(--global--font-size-2);}}
 
 /* 
 * Fonts 
@@ -258,6 +271,9 @@ nav ul li a, p, .navbar, .btn, ul li
 .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 }
+.navbar-light .navbar-toggler {
+	color: rgba(0,0,0,0);
+}
 
 /*my css*/
 a {
@@ -318,6 +334,25 @@ nav ul li a {
 	padding: 5vw 5vw 8vw 5vw;
 }
 
+@media only screen and (max-width: 1000px) {
+	.margins {
+		padding-top: 5vw;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.margins {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		padding-top: 10vw;
+
+		text-align: center;
+	}
+
+	.buttons {
+		display: none;
+	}
+}
 
 
 
@@ -344,7 +379,7 @@ nav ul li a {
     position: relative;
 	width: 20vw;
 	height: 27vw;
-	border-radius: 22px;
+	border-radius: 2vw;
 	object-fit: cover;
 }
 .img-overlay .over {
@@ -354,7 +389,7 @@ nav ul li a {
     width: 100%;
     height: 100%;
 	background-image: linear-gradient(to left, rgba(0,0,0, .3), rgba(0,0,0, .3));
-	border-radius: 22px;
+	border-radius: 2vw;
 }
 .img-overlay .zmdi {
 	bottom: 0;
@@ -368,7 +403,32 @@ nav ul li a {
 	padding: 1vw 8vw 1vw 0;
 }
 
-
+@media only screen and (max-width: 500px) {
+	.info {
+		flex-direction: column-reverse;
+		padding: 5vw 0 1vw 0;
+		align-items: center;
+	}
+	.info p:not(#trouble){
+		display:none;
+	}
+	#trouble {
+		text-align: center;
+	}
+	#about {
+		flex-direction: column-reverse;
+	}
+	#about, #exp, #project {
+		align-items: center;
+	}
+	h2 {
+		padding-bottom: 2vw;
+	}
+	.img-overlay, .about-section img, .experience-section img, .pnc-section img {
+		width: 32.5vw;
+		height: 40vw;
+	}
+}
 
 
 
@@ -417,7 +477,19 @@ nav ul li a {
 }
 
 
-
+@media only screen and (max-width: 500px) {
+	.gallery, .proj {
+		flex-direction: column;
+		align-items: center;
+	}
+	.background {
+		width: 33vw;
+	}
+	.gallery img, .proj img {
+		height: 30vw;
+		width: 30vw;
+	}
+}
 
 
 /*
@@ -520,7 +592,43 @@ form {
 	color: black;
 }
 
-
+@media only screen and (max-width: 500px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}
+	form {
+		width: 100%;
+		padding-bottom: 6vw;
+	}
+	#textarea.form-control {
+		height: 45vw;
+	}
+	#name.form-control, #telephone.form-control {
+		height: 8vw;
+	}
+	.pd {
+		padding: 0 4vw;
+	}
+	.socials-area .zmdi {
+		font-size: 8vw;
+		height: 8vw;
+		width: 8vw;
+	}
+	.back, .social {
+		height: 10vw;
+	}
+	.links {
+		padding: 4vw 0 1vw 0;
+	}
+	.social-text {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.email {
+		text-align: center;
+	}
+}
 
 
 /*
