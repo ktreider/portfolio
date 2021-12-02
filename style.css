@@ -82,11 +82,11 @@ h5, a, .smaller, .job ul li, .proj .btn, .column p, .column ul li {font-size: va
 @media only screen and (max-width: 500px) {
 	:root {
 		/* Font Sizes */
-		--global--font-size-xxs: 2vw;
-		--global--font-size-xs: 3vw;
-		--global--font-size-s: 4vw;
-		--global--font-size-m: 5.5vw;
-		--global--font-size-lg: 7vw;
+		--global--font-size-xxs: 2.15vw;
+		--global--font-size-xs: 3.25vw;
+		--global--font-size-s: 4.25vw;
+		--global--font-size-m: 5.75vw;
+		--global--font-size-lg: 7.25vw;
 	}
 }
 
@@ -348,7 +348,9 @@ nav ul li a {
 
 		text-align: center;
 	}
-
+	#title {
+		padding: 8vw 5vw;
+	}
 	.buttons {
 		display: none;
 	}
@@ -425,8 +427,8 @@ nav ul li a {
 		padding-bottom: 2vw;
 	}
 	.img-overlay, .about-section img, .experience-section img, .pnc-section img {
-		width: 32.5vw;
-		height: 40vw;
+		width: 42.5vw;
+		height: 50vw;
 	}
 }
 
@@ -483,11 +485,11 @@ nav ul li a {
 		align-items: center;
 	}
 	.background {
-		width: 33vw;
+		width: 43vw;
 	}
 	.gallery img, .proj img {
-		height: 30vw;
-		width: 30vw;
+		height: 40vw;
+		width: 40vw;
 	}
 }
 
@@ -591,21 +593,26 @@ form {
 .zmdi.black {
 	color: black;
 }
+.project-section a {
+	width: unset;
+}
 
 @media only screen and (max-width: 500px) {
 	.container {
 		flex-direction: column;
 		align-items: center;
+		max-width: 100%;
 	}
 	form {
 		width: 100%;
 		padding-bottom: 6vw;
+		margin-right: 0;
 	}
 	#textarea.form-control {
-		height: 45vw;
+		height: 55vw;
 	}
 	#name.form-control, #telephone.form-control {
-		height: 8vw;
+		height: 10vw;
 	}
 	.pd {
 		padding: 0 4vw;
@@ -619,7 +626,7 @@ form {
 		height: 10vw;
 	}
 	.links {
-		padding: 4vw 0 1vw 0;
+		padding: 4vw 0 4vw 0;
 	}
 	.social-text {
 		flex-direction: column-reverse;
