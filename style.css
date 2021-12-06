@@ -365,7 +365,7 @@ nav ul li a {
 */
 .about-section {
 	background-color: var(--global--color-green);
-	padding: 5vw 0;
+	padding: 6.5vw 0 5vw 0;
 }
 .about-section p, .experience-section p, .pnc-section p {
 	line-height: 1.5;
@@ -406,13 +406,13 @@ nav ul li a {
 }
 
 @media only screen and (max-width: 500px) {
-	.info {
+	.homepage-only.info {
 		flex-direction: column-reverse;
 		padding: 5vw 0 1vw 0;
 		align-items: center;
 	}
-	.info p:not(#trouble){
-		display:none;
+	.H {
+		display: none;
 	}
 	#trouble {
 		text-align: center;
@@ -425,6 +425,7 @@ nav ul li a {
 	}
 	h2 {
 		padding-bottom: 2vw;
+		text-align: center;
 	}
 	.img-overlay, .about-section img, .experience-section img, .pnc-section img {
 		width: 42.5vw;
@@ -754,8 +755,53 @@ footer {
 	padding: 1vw 0 6vw 0;
 }
 
+.personal-area-mobile {
+	display: none;
+}
 
+@media only screen and (max-width: 500px) {
+	.aboutpage #about {
+		padding-top: 9vw;
+	}
+	.info {
+		padding-right: 0;
+	}
+	.personal-area {
+		display: none;
+	}
+	.personal-area-mobile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
 
+		width: calc( .85 * var(--responsive--aligndefault-width));
+		margin: auto;
+		padding: 5vw 0;
+	}
+	
+	.personal-area-mobile * {
+		padding: 2vw 0;
+	}
+	.personal-area-mobile img {
+		height: 40vw;
+		width: 60vw;
+		object-fit: cover;
+		padding: 2vw;
+	}
+	.personal-area-mobile img:nth-child(1) {
+		background-color: var(--global--color-green);
+	}
+	.personal-area-mobile img:nth-child(3) {
+		background-color: var(--global--color-yellow);
+	}
+	.personal-area-mobile img:nth-child(5) {
+		background-color: var(--global--color-blue);
+	}
+	.personal-area-mobile img:nth-child(7) {
+		background-color: var(--global--color-grey);
+	}
+}
 
 
 
@@ -765,7 +811,7 @@ footer {
 */
 .experience-section {
 	background-color: var(--global--color-grey);
-	padding: 5vw 0;
+	padding: 7.5vw 0 5vw 0;
 }
 .text-section {
 	width: calc( .85 * var(--responsive--aligndefault-width));
@@ -816,7 +862,7 @@ footer {
 */
 .pnc-section {
 	background-color: var(--global--color-blue);
-	padding: 5vw 0;
+	padding: 7.5vw 0 5vw 0;
 	color: var(--global--color-grey);
 }
 .pnc-section h2 {
