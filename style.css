@@ -77,7 +77,7 @@ h1 {font-size: var(--global--font-size-lg);}
 h2 {font-size: var(--global--font-size-m);}
 h3 {font-size: var(--global--font-size-s);}
 h4, .btn, p, .lght-brwn a, li, .form-control, #submit {font-size: var(--global--font-size-xs);}
-h5, a, .smaller, .job ul li, .proj .btn, .column p, .column ul li {font-size: var(--global--font-size-xxs);}
+h5, a, .smaller, .job ul li, .proj .btn, .column p, .column ul li, .more-photos p {font-size: var(--global--font-size-xxs);}
 
 @media only screen and (max-width: 500px) {
 	:root {
@@ -755,6 +755,9 @@ footer {
 	margin: auto;
 	text-align: center;
 	padding: 1vw 0 6vw 0;
+}
+.more-photos p {
+	padding: 1vw;
 }
 
 .personal-area-mobile {
