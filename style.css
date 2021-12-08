@@ -184,7 +184,10 @@ nav ul li a, p, .navbar, .btn, ul li
 	}
 }
 
-
+/*error styling */
+.error {
+	padding: 10vw;
+}
 
 /*
 * Button Styling
