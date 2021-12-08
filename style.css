@@ -82,11 +82,11 @@ h5, a, .smaller, .job ul li, .proj .btn, .column p, .column ul li {font-size: va
 @media only screen and (max-width: 500px) {
 	:root {
 		/* Font Sizes */
-		--global--font-size-xxs: 2.5vw;
-		--global--font-size-xs: 3.5vw;
-		--global--font-size-s: 4.25vw;
-		--global--font-size-m: 5.75vw;
-		--global--font-size-lg: 7.25vw;
+		--global--font-size-xxs: 3.5vw;
+		--global--font-size-xs: 4.5vw;
+		--global--font-size-s: 5.25vw;
+		--global--font-size-m: 7.25vw;
+		--global--font-size-lg: 8.25vw;
 	}
 }
 
@@ -630,6 +630,7 @@ form {
 	}
 	.links {
 		padding: 4vw 0 4vw 0;
+		justify-content: center;
 	}
 	.social-text {
 		flex-direction: column-reverse;
@@ -805,6 +806,10 @@ footer {
 	}
 	.personal-area-mobile img:nth-child(7) {
 		background-color: var(--global--color-grey);
+	}
+
+	.more-photos .btn {
+		padding: 2vw;
 	}
 }
 
