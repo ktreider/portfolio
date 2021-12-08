@@ -82,8 +82,8 @@ h5, a, .smaller, .job ul li, .proj .btn, .column p, .column ul li {font-size: va
 @media only screen and (max-width: 500px) {
 	:root {
 		/* Font Sizes */
-		--global--font-size-xxs: 2.15vw;
-		--global--font-size-xs: 3.25vw;
+		--global--font-size-xxs: 2.5vw;
+		--global--font-size-xs: 3.5vw;
 		--global--font-size-s: 4.25vw;
 		--global--font-size-m: 5.75vw;
 		--global--font-size-lg: 7.25vw;
@@ -852,6 +852,44 @@ footer {
 	display: flex;
 	padding: 5vw 0;
 	justify-content: space-between;
+}
+
+@media only screen and (max-width: 500px) {
+	.exppage {
+		padding-top: 7vw;
+	}
+	#exp {
+		flex-direction: column-reverse;
+	}
+	#exp h2 {
+		padding-bottom: 4vw;
+	}
+
+	.job {
+		flex-direction: column;
+		height: 100%;
+		padding: 4vw 0;
+	}
+	.job ul {
+		padding: 1vw 3vw;
+	}
+	.text-section {
+		width: calc( .95 * var(--responsive--aligndefault-width));
+		margin: auto;
+	}
+	.text-section h3 {
+		padding-top: 7vw;
+	}
+	.gallery-exp {
+		flex-direction: column;
+		align-items: center;
+		padding: 8vw 0;
+	}
+	.gallery-exp img {
+		height: 30vw;
+		width: 30vw;
+		margin: 1vw 0;
+	}
 }
 
 
