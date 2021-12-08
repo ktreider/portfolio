@@ -95,7 +95,6 @@ h5, a, .smaller, .job ul li, .proj .btn, .column p, .column ul li {font-size: va
 @media only screen and (min-width: 1500px) {.navbar-brand {font-size: var(--global--font-size-xs);}}
 @media only screen and (max-width: 1000px) {.navbar-brand {font-size: var(--global--font-size-s);}
 											.nav-link {font-size: var(--global--font-size-s);}}
-@media only screen and (max-width: 700px) {.navbar-brand {font-size: var(--global--font-size-2);}}
 
 /* 
 * Fonts 
