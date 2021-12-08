@@ -481,12 +481,11 @@ nav ul li a {
 
 
 @media only screen and (max-width: 500px) {
-	.gallery, .proj {
-		flex-direction: column;
-		align-items: center;
-	}
 	.background {
-		width: 43vw;
+		width: 44vw;
+		height: 44vw;
+		justify-content: center;
+		align-items: center;
 	}
 	.gallery img, .proj img {
 		height: 40vw;
@@ -777,7 +776,7 @@ footer {
 
 		width: calc( .85 * var(--responsive--aligndefault-width));
 		margin: auto;
-		padding: 5vw 0;
+		padding: 6vw 0 0 0;
 	}
 	
 	.personal-area-mobile * {
@@ -788,6 +787,9 @@ footer {
 		width: 60vw;
 		object-fit: cover;
 		padding: 2vw;
+	}
+	.personal-area-mobile p {
+		padding: 4vw 0 6vw 0;
 	}
 	.personal-area-mobile img:nth-child(1) {
 		background-color: var(--global--color-green);
@@ -933,4 +935,55 @@ footer {
 }
 .column:last-child {
 	padding-left: 1vw;
+}
+
+@media only screen and (max-width: 500px) {
+	.projectspage {
+		padding-top: 8vw;
+	}
+	.pnc-section h2 {
+		width: 100%;
+		padding-bottom: 4vw;
+	}
+	#project {
+		flex-direction: column-reverse;
+	}
+	.projects {
+		width: calc( .95 * var(--responsive--aligndefault-width));
+		margin: auto;
+		padding: 4vw 0;
+	}
+
+	.proj, .proj.two {
+		padding: 2vw 0;
+	}
+	.proj p, .proj.two p{
+		padding-bottom: 2vw; 
+	}
+	.gallery, .proj, .proj.two {
+		flex-direction: column;
+		align-items: center;
+	}
+	.sect .btn, .proj .btn.longer {
+		width: initial;
+	}
+	.btn {
+		padding: 2vw 0;
+	}
+
+	.courses {
+		padding: 7vw 0;
+	}
+	.cols {
+		flex-direction: column;
+	}
+	.column:first-child {
+		padding-bottom: 7vw;
+	}
+	.column:nth-child(2) {
+		padding-bottom: 7vw;
+	}
+	.column ul {
+		padding: 0 3vw;
+	}
 }
