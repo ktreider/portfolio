@@ -187,8 +187,8 @@ nav ul li a, p, .navbar, .btn, ul li, blockquote
 @media only screen and (min-width: 1000px) {
 
 	:root {
-		--responsive--aligndefault-width: min(calc(108vw - 10 * var(--global--spacing-horizontal)), 2250px); 
-		--responsive--alignwide-width: min(calc(108vw - 10 * var(--global--spacing-horizontal)), 2250px); 
+		--responsive--aligndefault-width: min(calc(115vw - 10 * var(--global--spacing-horizontal)), 2250px); 
+		--responsive--alignwide-width: min(calc(115vw - 10 * var(--global--spacing-horizontal)), 2250px); 
 	}
 }
 
@@ -1032,7 +1032,7 @@ footer {
 }
 .job {
 	display: flex;
-	height: 12vw;
+	height: 13vw;
 }
 .job p {
 	line-height: 1.5;
