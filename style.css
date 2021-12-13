@@ -924,7 +924,7 @@ footer {
 		align-items: center;
 		text-align: center;
 
-		width: calc( .85 * var(--responsive--aligndefault-width));
+		width: calc( .9 * var(--responsive--aligndefault-width));
 		margin: auto;
 		padding: 6vw 0 0 0;
 	}
@@ -977,7 +977,7 @@ footer {
 		align-items: center;
 		text-align: center;
 
-		width: calc( .85 * var(--responsive--aligndefault-width));
+		width: calc( .95 * var(--responsive--aligndefault-width));
 		margin: auto;
 		padding: 6vw 0 0 0;
 	}
