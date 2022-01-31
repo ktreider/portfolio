@@ -45,7 +45,7 @@ table {
 	border-spacing: 0;
 }
 a:hover {
-	text-decoration: none;
+	text-decoration: none !important; /*to override linkedin js*/
 	color: initial;
 }
 
@@ -70,14 +70,14 @@ a:hover {
 
 }
 /* 
-* all font sizes. h6 excluded 
+* all font sizes. h6 excluded. !important used to override linkedin js
 *	==============================================
 */ 
-h1 {font-size: var(--global--font-size-lg);}
-h2 {font-size: var(--global--font-size-m);}
-h3 {font-size: var(--global--font-size-s);}
-h4, .btn, p, .lght-brwn a, li, .form-control, #submit {font-size: var(--global--font-size-xs);}
-h5, a, .smaller, .job ul li, .proj .btn, .column p, .column ul li, .more-photos blockquote, .personal-area p {font-size: var(--global--font-size-xxs);}
+h1 {font-size: var(--global--font-size-lg) !important;}
+h2 {font-size: var(--global--font-size-m) !important;}
+h3 {font-size: var(--global--font-size-s) !important;}
+h4, .btn, p, .lght-brwn a, li, .form-control, #submit {font-size: var(--global--font-size-xs) !important;}
+h5, a, .smaller, .job ul li, .proj .btn, .column p, .column ul li, .more-photos blockquote, .personal-area p {font-size: var(--global--font-size-xxs) !important;}
 
 @media only screen and (max-width: 750px) {
 	:root {
@@ -259,7 +259,13 @@ nav ul li a, p, .navbar, .btn, ul li, blockquote
 	padding-bottom: 3vw;
 }
 
-
+/*to override linkedin js */
+a.btn.green:visited {
+	color: #008f6d !important; 
+}
+a.btn.green:hover {
+	color: white !important;
+}
 
 /*
 * Links & nav hovering
@@ -300,7 +306,10 @@ a {
 	padding: 1vw 1.5vw;
 }
 
-
+/*to override linkedin js */
+a.h-bold:visited {
+	color: initial !important;
+}
 
 
 
