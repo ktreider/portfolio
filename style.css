@@ -311,7 +311,12 @@ a.h-bold:visited {
 	color: initial !important;
 }
 
-
+.LI-profile-badge *{
+	font-size: 1.25vw !important;
+}
+.profile-badge__content-profile-headline {
+	display: none;
+}
 
 /*
 * Header & Navigation
