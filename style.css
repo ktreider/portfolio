@@ -1186,6 +1186,9 @@ footer {
 .projects .background {
 	background-color: var(--global--color-grey);
 }
+.fit {
+	object-fit: contain;
+}
 .sect {
 	padding: 2vw;
 
